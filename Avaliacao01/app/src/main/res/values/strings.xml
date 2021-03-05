@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Avaliacao01</string>
+    <string name="exibir">Exibir</string>
+    <string name="php">PHP</string>
+    <string name="java">Java</string>
+    <string name="python">Python</string>
+    <string name="web">Web</string>
+    <string name="mobile">Mobile</string>
+    <string name="desktop">Desktop</string>
+
+    <string-array name="frameworks">
+        <item>Nenhum</item>
+        <item>Django</item>
+        <item>Laravel</item>
+        <item>Struts</item>
+        <item>CodeIgniter</item>
+        <item>Spring</item>
+        <item>Flask</item>
+        <item>Zend</item>
+        <item>CherryPy</item>
+        <item>Hibernate </item>
+        <item>Web2py</item>
+    </string-array>
+
+</resources>

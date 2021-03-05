@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Encontro22</string>
+    
+    <string-array name="frameworks">
+        <item></item>
+        <item>Django</item>
+        <item>Laravel</item>
+        <item>Struts</item>
+        <item>CodeIgniter</item>
+        <item>Spring</item>
+        <item>Flask</item>
+        <item>Zend</item>
+        <item>CherryPy</item>
+        <item>Hibernate </item>
+        <item>Web2py</item>
+    </string-array>
+    
+</resources>

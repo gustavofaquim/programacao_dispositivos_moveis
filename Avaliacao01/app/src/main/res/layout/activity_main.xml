@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+
+        <TextView
+            android:id="@+id/frase"
+            android:layout_width="267dp"
+            android:layout_height="40dp"
+            android:text="Quando você começou a programar?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn"
+            tools:visibility="visible"
+            android:gravity="center"/>
+
+        <CalendarView
+            android:id="@+id/calendario"
+            android:layout_width="371dp"
+            android:layout_height="354dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="17dp"
+            app:layout_constraintBottom_toTopOf="@+id/checkJava"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <CheckBox
+                android:id="@+id/checkPhp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/php"
+                app:buttonTint="#1E88E5"
+                app:layout_constraintEnd_toStartOf="@+id/checkJava"
+                app:layout_constraintStart_toEndOf="@+id/checkPhp"
+                app:layout_constraintTop_toBottomOf="@+id/calendario" />
+
+            <CheckBox
+                android:id="@+id/checkJava"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/java"
+                app:layout_constraintEnd_toStartOf="@+id/checkPython"
+                app:layout_constraintStart_toEndOf="@+id/checkPhp"
+                app:layout_constraintTop_toBottomOf="@+id/calendario" />
+
+            <CheckBox
+                android:id="@+id/checkPython"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/python"
+                app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkJava"
+                app:layout_constraintTop_toBottomOf="@+id/calendario"
+                app:layout_constraintVertical_bias="1.0" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="232dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginEnd="96dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/spinner1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkJava">
+
+            <RadioButton
+                android:id="@+id/radioWeb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/web" />
+
+            <RadioButton
+                android:id="@+id/radioDesktop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desktop" />
+
+            <RadioButton
+                android:id="@+id/radioMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mobile" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="234dp"
+            android:layout_height="46dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/exibir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+        <TextView
+            android:id="@+id/visor"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn"
+            tools:visibility="visible"
+            android:gravity="left"/>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
