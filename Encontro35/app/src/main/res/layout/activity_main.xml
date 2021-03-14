@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/editTextEndereco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="Endereço"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/editTextTelefone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEndereco" />
+
+    <EditText
+        android:id="@+id/editTextTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="74dp"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/btnGravar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+    <Button
+        android:id="@+id/btnGravar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="Salvar"
+        app:backgroundTint="#00ACC1"
+        app:layout_constraintBottom_toTopOf="@+id/btnImprimir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTelefone" />
+
+    <Button
+        android:id="@+id/btnImprimir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="59dp"
+        android:text="IMPRIMIR TODOS"
+        app:backgroundTint="#FFB300"
+        app:layout_constraintBottom_toTopOf="@+id/fabNovo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGravar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabExcluir"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="46dp"
+        android:clickable="true"
+        app:backgroundTint="#E53935"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/fabEditar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditar"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="44dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNovo"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:clickable="true"
+        app:backgroundTint="#039BE5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

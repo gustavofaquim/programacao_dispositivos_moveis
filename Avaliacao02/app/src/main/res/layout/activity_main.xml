@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="NOME"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/editTextCPF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="CPF"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/editTextSalarioBruto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
+
+    <EditText
+        android:id="@+id/editTextSalarioBruto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:hint="SALÁRIO BRUTO"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/editTextDesconto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCPF" />
+
+    <EditText
+        android:id="@+id/editTextDesconto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="% DESCONTO(S)"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSalarioBruto" />
+
+    <Button
+        android:id="@+id/btnGravar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="548dp"
+        android:layout_marginEnd="48dp"
+        android:text="CADASTRAR"
+        app:backgroundTint="#00ACC1"
+        app:layout_constraintEnd_toStartOf="@+id/btnImprimir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnImprimir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="548dp"
+        android:layout_marginEnd="35dp"
+        android:text="VISUALIZAR"
+        app:backgroundTint="#FFB300"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toEndOf="@+id/btnGravar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabExcluir"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="46dp"
+        android:clickable="true"
+        app:backgroundTint="#E53935"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintStart_toEndOf="@+id/fabEditar"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular"
+        app:layout_constraintVertical_bias="0.821"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNovo"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:clickable="true"
+        app:backgroundTint="#039BE5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular"
+        app:layout_constraintVertical_bias="0.821"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditar"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="44dp"
+        android:clickable="true"
+        app:backgroundTint="#00ACC1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular"
+        app:layout_constraintVertical_bias="0.821"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="464dp"
+        android:text="Calcular Salário"
+        android:textColor="#FFB300"
+        app:backgroundTint="#FFFFFF"
+        app:iconTint="#C0CA33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSalario"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="19sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInfo" />
+
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_width="208dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
+        android:text="Salário liquido = R$ "
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDesconto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
